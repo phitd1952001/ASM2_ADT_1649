@@ -1,9 +1,12 @@
 package Main;
-
+import java.text.DecimalFormat;
+import java.text.Format;
+import java.text.NumberFormat;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
@@ -16,6 +19,7 @@ public class Main {
 	private static String USER_DIR = System.getProperty("user.dir") + "/src";
 
 	public static void main(String[] args) throws InterruptedException {
+		long start = System.currentTimeMillis();
 		String message1 = "";
 		String message2 = "";
 		String message3 = "";
@@ -82,7 +86,7 @@ public class Main {
 					Thread.sleep(800);
 				}
 			}
-			 if(r <= 0.4) {
+			if (r <= 0.4) {
 				Random random = new Random();
 				int num = random.nextInt(conversation.size());
 				SenderReceiver conversationOfSender = conversation.get(num);
@@ -94,6 +98,10 @@ public class Main {
 				Thread.sleep(100);
 			}
 		}
+		long end = System.currentTimeMillis();
+		NumberFormat formarter = new DecimalFormat("#0.000000");
 		System.out.println("Finish");
+		System.out.println("Execution time is: " + formarter.format((end - start)/10000d) + " seconds");
+		
 	}
 }

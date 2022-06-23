@@ -1,1 +1,1 @@
- term used to refer to storing and accessing data over the internet.  term used to refer to storing and accessing data over the internet.  term used to refer to storing and accessing data over the internet.  term used to refer to storing and accessing data over the internet. term used to refer to storing and accessing data over the internet. term used to refer to storing and accessing data over the internet.
+The Runtime class is encapsulated in the Runtime environment. This class is used for memory management.
